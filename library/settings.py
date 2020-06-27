@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import library.secret_env as secret 
 from datetime import timedelta
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -28,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['librayapp.herokuapp.com']
+ALLOWED_HOSTS = ['librayapp.herokuapp.com', 'localhost']
 
 AUTH_USER_MODEL = 'users.CustomUser'
 # Application definition
