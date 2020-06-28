@@ -197,8 +197,8 @@ SIMPLE_JWT = {
 }
 
 CORS_ORIGIN_WHITELIST = (
-    'google.com',
-    'librayapp.herokuapp.com'
+    'https://google.com',
+    'https://librayapp.herokuapp.com'
 )
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
