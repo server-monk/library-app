@@ -28,9 +28,9 @@ from rest_framework_simplejwt.views import (
 
 schema_view = get_schema_view(
     openapi.Info(
-        title = 'Procure API',
+        title = 'Library API',
         default_version = 'v1',
-        description = 'Procure application: An E-commerce site',
+        description = 'Library application: borrow and return books',
         terms_of_service = 'https://www.google.com/policies/terms/',
       contact=openapi.Contact(email='contact@snippets.local'),
       license=openapi.License(name='BSD License'),
