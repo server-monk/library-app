@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
+DEBUG = True  # (os.environ.get('DEBUG_VALUE') == 'True')
 
 ALLOWED_HOSTS = ['librayapp.herokuapp.com', 'localhost']
 
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
     # local
     'users',
+    'collection',
 ]
 
 MIDDLEWARE = [
@@ -141,6 +142,7 @@ MEDIA_URL = '/media/'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
